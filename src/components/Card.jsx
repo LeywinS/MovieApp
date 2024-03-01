@@ -6,10 +6,12 @@ import { FiThumbsUp } from "react-icons/fi";
 const Card = ({ result }) => {
   return (
     <div className="group cursor-pointer sm:hover:shadow-slate-400 rounded-lg sm:border sm:border-slate-400 shadow-slate-300 m-1">
-      <Link href={`/movie/${result.id}`}>
+      <Link href={`/movies/${result.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${
-            result.backdrop_path || result.poster_path
+            result.backdrop_path ||
+            result.poster_path ||
+            "https://firebasestorage.googleapis.com/v0/b/mern-blog-ff822.appspot.com/o/nOTFOUND.jpg?alt=media&token=36034bce-3c99-4adb-a359-8ded1c07b1de"
           }`}
           width={500}
           height={300}
